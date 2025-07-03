@@ -1,0 +1,19 @@
+.SignupContainer{
+    
+    background-color: rgba(75, 72, 72,0.35);
+    border: 10px solid ;
+    border-color: #d4af37;
+    border-radius: 24px;
+}
+.SignupContainer h2{
+    text-align: center;
+    margin: 10px;
+}
+.signup-btn{
+    background-color: white;
+}
+@media (max-width: 400px) {
+  .SignupContainer {
+    width: 90%;
+  }
+}
