@@ -12,7 +12,7 @@ function Login() {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/authorize/login`, {
+      const response = await axios.post("https://backend-duradior.vercel.app/api/authorize/login", {
         phNum,
         Password,
       });
