@@ -16,7 +16,7 @@ function Signup(){
       return;
     }
       try {
-    const response = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/authorize/register`, {
+    const response = await axios.post("https://backend-duradior.vercel.app/api/authorize/register", {
       Name,
       PhoneNum,
       Password,
