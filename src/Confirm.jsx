@@ -41,7 +41,7 @@ export default function Confirm() {
     };
     try {
     if(modeOfPay==="COD"){
-    const result3=  await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/order/cod`,payload);
+    const result3=  await axios.post("https://backend-duradior.vercel.app/api/user/order/cod",payload);
       if(result3.status===200){
         alert("ORDER PLACED SUCCESSFULLY");
       } 
@@ -50,7 +50,7 @@ export default function Confirm() {
       }
     }
     else{
-      const result=await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/order/create`,payload);
+      const result=await axios.post("https://backend-duradior.vercel.app/api/user/order/create",payload);
       console.log("Razorpay Key:", import.meta.env.VITE_RAZORPAY_KEY);
       if(result.status===200){
         const order = result.data;
@@ -68,7 +68,7 @@ export default function Confirm() {
             razorpay_payment_id: razorpay_payment_id,
             razorpay_signature: razorpay_signature
           }
-          const result1 = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/order/validate`,payload);
+          const result1 = await axios.post("https://backend-duradior.vercel.app/api/user/order/validate",payload);
             if(result1.status===200){
              alert("ORDER PLACED SUCCESSFULLY");
             }
