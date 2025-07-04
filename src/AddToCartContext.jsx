@@ -54,7 +54,7 @@ export function CartProvider({ children }) {
     const quantityToCheck = existingItem ? (existingItem.quantity || 1) + 1 : 1;
     console.log(itemId)
     try {
-          const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/Cart/add`, {
+          const res = await axios.get("https://backend-duradior.vercel.app/api/user/Cart/add", {
           params: {
           itemid: itemId,
           quantity: quantityToCheck
@@ -105,7 +105,7 @@ export function CartProvider({ children }) {
 
     try {
       // Call backend to check stock
-      const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/Cart/add`, {
+      const res = await axios.get("https://backend-duradior.vercel.app/api/user/Cart/add", {
         params: {
           itemid: itemId,
           quantity: newQuantity
