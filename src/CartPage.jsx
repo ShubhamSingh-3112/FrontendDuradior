@@ -18,7 +18,7 @@ function CartPage() {
 
     try {
       // Call backend to check stock
-      const res = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/Cart/add`, {
+      const res = await axios.get("https://backend-duradior.vercel.app/api/user/Cart/add", {
         params: {
           itemid: itemId,
           quantity: newQuantity
@@ -58,7 +58,7 @@ function CartPage() {
       
 
       try {
-        const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/user/Cart/save`, {
+        const res = await axios.post("https://backend-duradior.vercel.app/api/user/Cart/save", {
           userPh: phone,
           Items
         });
